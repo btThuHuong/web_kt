@@ -10,7 +10,9 @@ Route::get('/theloai/{id}', [MovieController::class, 'index'])
 
 //Trang chủ
 Route::get('/', [App\Http\Controllers\MovieController::class, 'index']);
-
-
-
 Route::get('/openrouter', [OpenRouterController::class, 'chat']);
+
+
+use App\Http\Controllers\MovieController002;
+Route::get('/movie/{id}', [MovieController002::class, 'detail']);
+Route::post('/timkiem', [MovieController002::class, 'search']);

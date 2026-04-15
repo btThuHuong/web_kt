@@ -59,7 +59,7 @@
                 
                 <td>
                     <div class="btn-group">
-                        <a href="{{ route('movie.id{{}}', ['id' => $movie->id]) }}" class='btn btn-sm btn-primary'>Xem</a>
+                        <a href="{{ url('/movie/' . $movie->id) }}" class='btn btn-sm btn-primary'>Xem</a>
                         &nbsp;
                         
                         <form method='get' action = "{{ route('movie.delete', ['id' => $movie->id]) }}" onsubmit="return confirm('Bạn có chắc chắn muốn xóa bộ phim này không?');">
